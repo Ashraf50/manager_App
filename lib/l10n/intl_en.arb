@@ -119,5 +119,7 @@
     "assigned_at":"Assigned At",
     "overdue":"Is Overdue",
     "select_section":"Select Section",
-    "section_name":"Section Name"
+    "section_name":"Section Name",
+        "noServicesAvailable": "No services available"
+
 }

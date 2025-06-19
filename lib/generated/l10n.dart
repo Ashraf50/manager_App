@@ -1259,6 +1259,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No services available`
+  String get noServicesAvailable {
+    return Intl.message(
+      'No services available',
+      name: 'noServicesAvailable',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

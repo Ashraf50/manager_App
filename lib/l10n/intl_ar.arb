@@ -119,5 +119,7 @@
     "assigned_at": "وقت الإسناد",
     "overdue":"لقد فات موعده",
     "select_section":"اختر القسم",
-    "section_name":"اسم القسم"
+    "section_name":"اسم القسم",
+        "noServicesAvailable": "لا توجد خدمات متاحة"
+
 }

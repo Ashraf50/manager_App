@@ -108,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "manager_name": MessageLookupByLibrary.simpleMessage("اسم المدير"),
         "max_time": MessageLookupByLibrary.simpleMessage("الوقت الأقصى"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "noServicesAvailable":
+            MessageLookupByLibrary.simpleMessage("لا توجد خدمات متاحة"),
         "no_conversations":
             MessageLookupByLibrary.simpleMessage("لا توجد محادثات بعد"),
         "no_details":

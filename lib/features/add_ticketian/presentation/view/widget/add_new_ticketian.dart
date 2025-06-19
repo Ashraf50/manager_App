@@ -120,9 +120,31 @@ class _AddNewTicketianState extends State<AddNewTicketian> {
                       } else if (state is FetchSelectableSectionsFailure) {
                         return Text(state.errMessage);
                       } else if (state is FetchSelectableSectionsSuccess) {
+                        if (state.sections.isEmpty) {
+                          return Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 12, horizontal: 12),
+                            margin: const EdgeInsets.only(top: 8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.grey.shade100,
+                            ),
+                            child: Text(
+                              S
+                                  .of(context)
+                                  .noServicesAvailable, // Add this key in .arb files
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.red,
+                              ),
+                            ),
+                          );
+                        }
                         return TicketianDropdownTextField(
                           sections: state.sections,
                           selectedSection: selectedSection,
+                          hint: S.of(context).select_section,
                           onChanged: (record) {
                             setState(() {
                               selectedSection = record;

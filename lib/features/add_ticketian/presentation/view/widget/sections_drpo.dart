@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:manager_app/core/constant/app_colors.dart';
 import 'package:manager_app/features/add_ticketian/data/model/ticketian_model/section.dart';
-import 'package:manager_app/generated/l10n.dart';
 
 class TicketianDropdownTextField extends StatelessWidget {
   final List<SectionModel> sections;
   final ValueChanged<SectionModel> onChanged;
   final SectionModel? selectedSection;
+  final String hint;
   const TicketianDropdownTextField({
     super.key,
     required this.sections,
     required this.onChanged,
     required this.selectedSection,
+    required this.hint,
   });
 
   @override
@@ -27,7 +28,7 @@ class TicketianDropdownTextField extends StatelessWidget {
           value: selectedSection,
           dropdownColor: AppColors.white,
           hint: Text(
-            S.of(context).select_section,
+            hint,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
           items: sections.map((record) {

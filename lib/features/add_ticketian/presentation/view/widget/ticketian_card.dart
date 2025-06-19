@@ -170,6 +170,7 @@ class _TicketianCardState extends State<TicketianCard> {
                       } else if (state is FetchSelectableSectionsSuccess) {
                         return TicketianDropdownTextField(
                           sections: state.sections,
+                          hint: widget.ticketian.section!.service!.name!,
                           selectedSection: selectedSection,
                           onChanged: (record) {
                             setState(() {
